@@ -2,5 +2,6 @@
 command = "pnpm run build"
 output_directory = "out"
 
-[deploy]
-command = "npx wrangler pages deploy out"
+[build.environment]
+NODE_VERSION = "22"
+PNPM_VERSION = "10"

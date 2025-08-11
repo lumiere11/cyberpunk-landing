@@ -65,6 +65,7 @@ git push origin main
      - **Build command**: `pnpm run build`
      - **Build output directory**: `out`
      - **Root directory**: `/` (leave empty)
+     - **Deploy command**: `npx wrangler pages deploy out`
    - Click "Save and Deploy"
 
 #### Option 2: Manual Deployment
@@ -156,7 +157,8 @@ To add a new language:
 - `pnpm lint` - Run ESLint
 - `pnpm pages:build` - Build for Cloudflare Pages
 - `pnpm preview` - Preview Cloudflare Pages build locally
-- `pnpm deploy` - Deploy to Cloudflare Pages
+- `pnpm deploy` - Build and deploy to Cloudflare Pages
+- `pnpm deploy:pages` - Deploy only to Cloudflare Pages (requires build first)
 
 ## 🤝 Contributing
 

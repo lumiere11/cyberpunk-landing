@@ -4,3 +4,6 @@ output_directory = "out"
 
 [deploy]
 command = "npx wrangler pages deploy out"
+
+[env.production]
+name = "cyberpunk-portfolio"

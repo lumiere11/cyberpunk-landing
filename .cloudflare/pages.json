@@ -1,0 +1,9 @@
+{
+  "build": {
+    "command": "pnpm run build",
+    "output_directory": "out"
+  },
+  "deploy": {
+    "command": "npx wrangler pages deploy out"
+  }
+}
