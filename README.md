@@ -42,6 +42,54 @@ pnpm dev
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
+## 🚀 Deployment
+
+### Cloudflare Pages (Recommended)
+
+#### Option 1: GitHub Integration (Recommended)
+
+1. **Push your code to GitHub:**
+```bash
+git add .
+git commit -m "Initial commit"
+git push origin main
+```
+
+2. **Connect to Cloudflare Pages:**
+   - Go to [Cloudflare Dashboard](https://dash.cloudflare.com)
+   - Navigate to "Pages" → "Create a project"
+   - Choose "Connect to Git"
+   - Select your GitHub repository
+   - Configure build settings:
+     - **Framework preset**: None
+     - **Build command**: `pnpm run build`
+     - **Build output directory**: `out`
+     - **Root directory**: `/` (leave empty)
+   - Click "Save and Deploy"
+
+#### Option 2: Manual Deployment
+
+1. **Install Wrangler CLI globally:**
+```bash
+pnpm add -g wrangler
+```
+
+2. **Login to Cloudflare:**
+```bash
+wrangler login
+```
+
+3. **Deploy to Cloudflare Pages:**
+```bash
+pnpm deploy
+```
+
+### Alternative Deployment Options
+
+- **Vercel**: Connect your GitHub repository to Vercel for automatic deployments
+- **Netlify**: Use `pnpm build` and deploy the `out` directory
+- **GitHub Pages**: Configure GitHub Actions for automatic deployment
+
 ## 🛠️ Technology Stack
 
 - **Framework**: Next.js 15
@@ -106,6 +154,9 @@ To add a new language:
 - `pnpm build` - Build for production
 - `pnpm start` - Start production server
 - `pnpm lint` - Run ESLint
+- `pnpm pages:build` - Build for Cloudflare Pages
+- `pnpm preview` - Preview Cloudflare Pages build locally
+- `pnpm deploy` - Deploy to Cloudflare Pages
 
 ## 🤝 Contributing
 

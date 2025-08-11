@@ -1,19 +1,11 @@
 /** @type {import('next').NextConfig} */
-import { setupDevPlatform } from '@cloudflare/next-on-pages/next-dev';
-
 const nextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
+  // Enable static exports for Cloudflare Pages
+  output: 'export',
+  trailingSlash: true,
   images: {
-    unoptimized: true,
-  },
-}
-if (process.env.NODE_ENV === 'development') {
-  await setupDevPlatform();
+    unoptimized: true
+  }
 }
 
 export default nextConfig
