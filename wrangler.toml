@@ -1,2 +1,5 @@
 [pages]
-build_output_directory = "out"
+pages_build_output_dir = "out"
+
+[build]
+command = "pnpm install && pnpm run build:pages"

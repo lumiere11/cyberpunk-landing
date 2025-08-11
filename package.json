@@ -9,8 +9,8 @@
     "pages:build": "next build",
     "preview": "pnpm run pages:build && npx wrangler pages dev",
     "deploy:pages": "npx wrangler pages deploy out",
-    "build": "next build",
-    "pages:deploy": "pnpm dlx wrangler pages deploy out"
+    "build:pages": "next build && next export",
+    "deploy": "pnpm dlx wrangler pages deploy out --project-name=cyberpunk-landing"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
