@@ -9,8 +9,8 @@
     "pages:build": "next build",
     "preview": "pnpm run pages:build && npx wrangler pages dev",
     "deploy:pages": "npx wrangler pages deploy out",
-    "build": "next build && next export",
-    "deploy": "wrangler pages deploy out"
+    "build": "next build",
+    "deploy": "npx wrangler pages deploy out"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
