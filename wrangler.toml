@@ -1,3 +1,6 @@
+name = "cyberpunk"
+account_id = "acb74b82adc41de67cb013adee07f38f"
+
 [pages]
 build_output_directory = "out"
 
