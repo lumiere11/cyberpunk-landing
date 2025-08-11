@@ -1,9 +1,12 @@
-name = "cyberpunk"
-account_id = "acb74b82adc41de67cb013adee07f38f"
+# Configuración básica del proyecto
+name = "cyberpunk-landing"
+compatibility_date = "2025-08-11"
 
+# Configuración específica para Pages
 [pages]
 build_output_directory = "out"
 
+# Configuración del proceso de build
 [build]
 command = "pnpm install && pnpm run build"
 
