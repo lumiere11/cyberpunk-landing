@@ -1,5 +1,4 @@
-[pages]
-pages_build_output_dir = "out"
-
-[build]
-command = "pnpm install && pnpm run build:pages"
+name = "cyberpunk-landing"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = ".vercel/output/static
