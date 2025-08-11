@@ -3,14 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "next build",
     "dev": "next dev",
     "lint": "next lint",
     "start": "next start",
     "pages:build": "next build",
     "preview": "pnpm run pages:build && npx wrangler pages dev",
-    "deploy": "pnpm run pages:build && npx wrangler pages deploy out",
-    "deploy:pages": "npx wrangler pages deploy out"
+    "deploy:pages": "npx wrangler pages deploy out",
+    "build": "next build && next export",
+    "deploy": "wrangler pages deploy out"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
