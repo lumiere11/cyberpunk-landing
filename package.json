@@ -9,8 +9,8 @@
     "pages:build": "next build",
     "preview": "pnpm run pages:build && npx wrangler pages dev",
     "deploy:pages": "npx wrangler pages deploy out",
-    "build": "npx @cloudflare/next-on-pages",
-    "deploy": "npx wrangler pages deploy .vercel/output/static"
+    "build": "next build",
+    "pages:deploy": "pnpm dlx wrangler pages deploy out"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
