@@ -1,4 +1,13 @@
 name = "cyberpunk-landing"
-compatibility_date = "2024-09-23"
+compatibility_date = "2024-08-11"
 compatibility_flags = ["nodejs_compat"]
-pages_build_output_dir = ".vercel/output/static
+
+[pages]
+pages_build_output_dir = ".vercel/output/static"
+
+[build]
+command = "pnpm install && pnpm run build && pnpm dlx @cloudflare/next-on-pages"
+
+[build.environment]
+NODE_VERSION = "20"
+NEXT_USE_NODEJS_COMPAT = "true"
