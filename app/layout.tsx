@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { JetBrains_Mono, Orbitron } from "next/font/google"
 import "./globals.css"
 import { LanguageProvider } from "@/hooks/use-language"
+import { Analytics } from "@vercel/analytics/next"
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -55,6 +56,7 @@ export default function RootLayout({
       <body className="font-mono">
         <LanguageProvider>
           {children}
+          <Analytics/>
         </LanguageProvider>
       </body>
     </html>
